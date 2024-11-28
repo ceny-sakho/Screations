@@ -15,8 +15,9 @@ const Navigation = () => {
     <nav className="fixed top-0 z-50 w-full bg-cream/90 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
-          <a href="#" className="text-2xl font-playfair font-bold text-gray-800">
-            Cake Design
+          <a href="#" className="flex items-center space-x-3">
+            <img src="/logo.png" alt="SCréations Logo" className="h-12 w-12" />
+            <span className="text-2xl font-playfair font-bold text-gray-800">SCréations</span>
           </a>
 
           {/* Desktop Menu */}
