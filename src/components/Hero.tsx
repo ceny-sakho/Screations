@@ -7,7 +7,7 @@ const Hero = () => {
         <img 
           src="/lovable-uploads/5b8a9e9e-e6c2-40bd-aa6e-812b5b59b390.png" 
           alt="S'Créations Logo" 
-          className="mx-auto mb-8 w-24 h-24"
+          className="mx-auto mb-8 w-24 h-24 mix-blend-multiply"
         />
         <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6">
           Des créations sucrées sur mesure
