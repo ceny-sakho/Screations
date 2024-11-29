@@ -10,10 +10,10 @@ const Hero = () => {
           className="mx-auto mb-8 w-24 h-24 mix-blend-multiply"
         />
         <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6">
-          Des créations sucrées sur mesure
+          L'émotion se déguste
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-          Pour tous vos moments précieux, des gâteaux uniques qui racontent votre histoire
+          Des gâteaux sur mesure qui capturent vos plus beaux moments
         </p>
         <a
           href="#contact"
