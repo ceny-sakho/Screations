@@ -12,6 +12,10 @@ const Navigation = () => {
       href: '/' 
     },
     {
+      label: 'Blog',
+      href: '/blog'
+    },
+    {
       label: 'Créations',
       href: '/creations',
       submenu: [
