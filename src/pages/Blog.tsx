@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation';
 import BlogSearch from '../components/BlogSearch';
 import BlogPosts from '../components/BlogPosts';
+import CategoryFilter from '../components/CategoryFilter';
 import { BlogProvider } from '../context/BlogContext';
 
 const Blog = () => {
@@ -12,8 +13,11 @@ const Blog = () => {
           Notre Blog
         </h1>
         <BlogProvider>
-          <BlogSearch />
-          <BlogPosts />
+          <div className="max-w-6xl mx-auto">
+            <BlogSearch />
+            <CategoryFilter />
+            <BlogPosts />
+          </div>
         </BlogProvider>
       </div>
     </div>

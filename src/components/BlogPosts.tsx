@@ -18,11 +18,13 @@ const BlogPosts = () => {
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
-            <div className="flex gap-2 mb-3">
+            <div className="flex flex-wrap gap-2 mb-3">
               {post.categories.map((category) => (
                 <span
                   key={category}
-                  className="text-xs font-medium px-2 py-1 rounded-full bg-primary/20 text-accent"
+                  className="text-xs font-medium px-3 py-1 rounded-full 
+                           bg-primary/20 text-accent hover:bg-primary/30 
+                           transition-colors cursor-pointer"
                 >
                   {category}
                 </span>
