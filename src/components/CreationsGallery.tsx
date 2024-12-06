@@ -6,7 +6,7 @@ const creations = [
     title: "Layer Cakes",
     icon: <Cake className="text-accent" size={24} />,
     description: "Gâteaux à étages personnalisés pour vos événements",
-    image: "/lovable-uploads/e6cdec3e-6139-4db5-88da-ed8e2d9a6275.png"
+    image: "/lovable-uploads/7312f195-73bf-4612-aa16-9004b9c350c0.png"
   },
   {
     title: "Cookies & Sablés",
