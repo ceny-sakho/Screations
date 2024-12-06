@@ -18,7 +18,7 @@ const creations = [
     title: "Cupcakes",
     icon: <IceCream className="text-accent" size={24} />,
     description: "Petites douceurs personnalisées",
-    image: "/lovable-uploads/82b524a7-167f-4a45-b359-91e86bcfa6fd.png"
+    image: "/lovable-uploads/677afdb1-eda2-4ec0-865f-e10dee321b53.png"
   }
 ];
 
