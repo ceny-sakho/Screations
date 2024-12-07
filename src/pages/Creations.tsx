@@ -8,7 +8,7 @@ const Creations = () => {
     { title: 'Number Cakes', href: '/creations/number-cakes', image: '/lovable-uploads/89ec154e-c499-44ca-b303-3cd65c4f7a46.png' },
     { title: 'Cupcakes', href: '/creations/cupcakes', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e' },
     { title: 'Sablés', href: '/creations/sables', image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9' },
-    { title: 'Cookies', href: '/creations/cookies', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e' },
+    { title: 'Cookies', href: '/creations/cookies', image: '/lovable-uploads/941dd3a8-dd72-4764-8750-14dfe2edffe0.png' },
     { title: 'Pop Cakes', href: '/creations/pop-cakes', image: 'https://images.unsplash.com/photo-1587668178277-295251f900ce' },
   ];
 
