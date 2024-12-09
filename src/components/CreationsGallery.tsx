@@ -12,7 +12,7 @@ const creations = [
     title: "Cookies & Sablés",
     icon: <Cookie className="text-accent" size={24} />,
     description: "Biscuits décorés avec finesse",
-    image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "/lovable-uploads/e7aa273a-2f93-4936-9b01-0a34cc91539e.png"
   },
   {
     title: "Cupcakes",
