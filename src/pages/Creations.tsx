@@ -9,7 +9,7 @@ const Creations = () => {
     { title: 'Cupcakes', href: '/creations/cupcakes', image: '/lovable-uploads/677afdb1-eda2-4ec0-865f-e10dee321b53.png' },
     { title: 'Sablés', href: '/creations/sables', image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9' },
     { title: 'Cookies', href: '/creations/cookies', image: '/lovable-uploads/963216bf-fe89-4b1e-a388-eb7f3d232f7b.png' },
-    { title: 'Pop Cakes', href: '/creations/pop-cakes', image: '/lovable-uploads/d7c9f1ae-2940-4485-9a91-7c16463cb64e.png' },
+    { title: 'Pop Cakes', href: '/creations/pop-cakes', image: '/lovable-uploads/fc2c8392-a9d7-4d1c-9e64-e623cf42d69f.png' },
   ];
 
   return (
