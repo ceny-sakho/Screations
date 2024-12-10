@@ -12,7 +12,7 @@ const Sables = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/lovable-uploads/ec663982-5e34-483b-bb94-e75970d42552.png" 
+              src="/lovable-uploads/c79cb987-9e87-455e-aea5-b5fc329c494f.png" 
               alt="Sablé Example" 
               className="w-full h-64 object-cover"
             />
