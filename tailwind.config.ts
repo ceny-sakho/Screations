@@ -21,7 +21,7 @@ export default {
       colors: {
         primary: "#FDE1D3",
         secondary: "#E5B0A7",
-        accent: "#D4AF37",
+        accent: "#E5B0A7",
         cream: "#FFFAF5",
         pearl: "#F6F6F7",
       },

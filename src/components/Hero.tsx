@@ -17,8 +17,8 @@ const Hero = () => {
         </p>
         <a
           href="#contact"
-          className="inline-block bg-accent text-white px-8 py-3 rounded-full text-lg font-medium 
-                   hover:bg-accent/90 transition-colors duration-300"
+          className="inline-block bg-secondary text-white px-8 py-3 rounded-full text-lg font-medium 
+                   hover:bg-secondary/90 transition-colors duration-300"
         >
           Demander un devis
         </a>
