@@ -5,7 +5,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 text-center relative animate-fade-up">
         <img 
-          src="/lovable-uploads/5b8a9e9e-e6c2-40bd-aa6e-812b5b59b390.png" 
+          src="/lovable-uploads/37bbcd03-06f1-4b76-8d73-515940011b16.png" 
           alt="S'Créations Logo" 
           className="mx-auto mb-8 w-24 h-24 mix-blend-multiply"
         />
