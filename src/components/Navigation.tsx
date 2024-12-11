@@ -56,6 +56,11 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/329a105e-afa5-47ad-b08a-2b4fc866c8a2.png" 
+              alt="SCréations Logo" 
+              className="h-12 w-12"
+            />
             <span className="text-2xl font-playfair font-bold text-gray-800">SCréations</span>
           </Link>
 
