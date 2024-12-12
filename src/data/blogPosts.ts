@@ -22,7 +22,7 @@ export const blogPosts = [
     title: "Conseils pour le transport de vos gâteaux",
     excerpt: "Comment transporter vos créations en toute sécurité ? Nos conseils d'experts.",
     content: "Contenu détaillé de l'article...",
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3",
+    image: "/lovable-uploads/4eb9fd88-cf21-45f2-ac05-35e40e33d98b.png",
     date: "2024-02-15",
     categories: ["Conseils", "Transport"]
   }
