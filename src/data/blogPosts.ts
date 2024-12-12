@@ -4,7 +4,7 @@ export const blogPosts = [
     title: "L'art du Layer Cake : Guide complet",
     excerpt: "Découvrez tous nos secrets pour réaliser un Layer Cake parfait, de la base jusqu'à la décoration finale.",
     content: "Contenu détaillé de l'article...",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+    image: "/lovable-uploads/ad8656cb-9cb4-4b23-8a5a-d408fd7108e2.png",
     date: "2024-02-20",
     categories: ["Tutoriels", "Layer Cakes"]
   },
