@@ -10,11 +10,10 @@ const LayerCakes = () => {
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Placeholder content - to be replaced with actual layer cakes */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1535141192574-5d4897c12636" 
-              alt="Layer Cake Example" 
+              src="/lovable-uploads/5be00112-d5ee-43b3-91a0-a8700078952f.png"
+              alt="Layer Cake Élégant" 
               className="w-full h-64 object-cover"
             />
             <div className="p-6">
