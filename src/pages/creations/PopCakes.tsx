@@ -12,7 +12,7 @@ const PopCakes = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/lovable-uploads/acb54346-f410-41b7-bc1d-fd9392300b6a.png" 
+              src="/lovable-uploads/7088e823-03bd-4d76-b85f-bcaa08a51221.png" 
               alt="Pop Cakes Roses et Blancs" 
               className="w-full h-64 object-cover"
             />
