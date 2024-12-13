@@ -18,6 +18,7 @@ import Allergenes from "./pages/aide/Allergenes";
 import Transport from "./pages/aide/Transport";
 import Conservation from "./pages/aide/Conservation";
 import Devis from "./pages/aide/Devis";
+import Commander from "./pages/aide/Commander";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/aide/transport" element={<Transport />} />
           <Route path="/aide/conservation" element={<Conservation />} />
           <Route path="/aide/devis" element={<Devis />} />
+          <Route path="/aide/commander" element={<Commander />} />
           <Route path="/cgv" element={<CGV />} />
         </Routes>
       </BrowserRouter>

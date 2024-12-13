@@ -1,7 +1,7 @@
 import Navigation from '../components/Navigation';
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
-import { AlertCircle, Truck, ThermometerSnowflake, FileText } from 'lucide-react';
+import { AlertCircle, Truck, ThermometerSnowflake, FileText, ShoppingCart } from 'lucide-react';
 
 const Aide = () => {
   const sections = [
@@ -28,6 +28,12 @@ const Aide = () => {
       href: '/aide/devis',
       icon: <FileText className="h-8 w-8 text-accent" />,
       description: 'Demandez un devis personnalisé pour votre projet'
+    },
+    { 
+      title: 'Commander en ligne', 
+      href: '/aide/commander',
+      icon: <ShoppingCart className="h-8 w-8 text-accent" />,
+      description: 'Commandez directement nos créations en ligne'
     },
   ];
 
