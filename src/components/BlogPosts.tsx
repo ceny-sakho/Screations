@@ -1,5 +1,6 @@
 import { useBlogContext } from '../context/BlogContext';
 import { formatDate } from '../utils/dateUtils';
+import { Link } from 'react-router-dom';
 
 const BlogPosts = () => {
   const { filteredPosts } = useBlogContext();
@@ -34,7 +35,9 @@ const BlogPosts = () => {
             <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
             <div className="flex justify-between items-center text-sm text-gray-500">
               <span>{formatDate(post.date)}</span>
-              <button className="text-accent hover:underline">Lire la suite</button>
+              <Link to={`/blog/${post.id}`} className="text-accent hover:underline">
+                Lire la suite
+              </Link>
             </div>
           </div>
         </article>
