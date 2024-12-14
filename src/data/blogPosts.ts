@@ -41,8 +41,6 @@ export const blogPosts = [
 
     La préparation commence bien avant le transport. Un gâteau bien réfrigéré (minimum 4 heures, idéalement une nuit) sera plus stable et résistant aux chocs. Pour les gâteaux à étages, l'utilisation de supports internes comme des dowels est cruciale pour la stabilité.
 
-    Le choix de la boîte est primordial. Optez pour une boîte rigide, légèrement plus grande que votre gâteau. L'espace entre le gâteau et les parois doit être minimal mais suffisant pour éviter tout contact. Un fond antidérapant peut faire toute la différence.
-
     Pour les longs trajets, pensez à la température. En été, une glacière peut être nécessaire. Les ice packs ne doivent jamais être en contact direct avec le gâteau mais peuvent être placés autour de la boîte.
 
     Dans la voiture, placez la boîte sur une surface plane, idéalement le plancher derrière le siège passager. Évitez le coffre où les vibrations sont plus importantes. Une serviette humide placée sous la boîte peut aider à absorber les chocs.
