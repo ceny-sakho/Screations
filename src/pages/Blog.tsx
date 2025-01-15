@@ -2,7 +2,6 @@ import Navigation from '../components/Navigation';
 import BlogSearch from '../components/BlogSearch';
 import BlogPosts from '../components/BlogPosts';
 import CategoryFilter from '../components/CategoryFilter';
-import { BlogProvider } from '../context/BlogContext';
 
 const Blog = () => {
   return (
@@ -12,13 +11,11 @@ const Blog = () => {
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-center mb-16">
           Notre Blog
         </h1>
-        <BlogProvider>
-          <div className="max-w-6xl mx-auto">
-            <BlogSearch />
-            <CategoryFilter />
-            <BlogPosts />
-          </div>
-        </BlogProvider>
+        <div className="max-w-6xl mx-auto">
+          <BlogSearch />
+          <CategoryFilter />
+          <BlogPosts />
+        </div>
       </div>
     </div>
   );
