@@ -11,13 +11,35 @@ const ContactForm = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Demande envoyée !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
-    });
-    setFormData({ name: '', email: '', event: '', message: '' });
+    
+    try {
+      // Simuler l'envoi d'email (dans un vrai cas, ceci serait géré par un backend)
+      console.log('Envoi du devis à sabrina.sakho@gmail.com', {
+        to: 'sabrina.sakho@gmail.com',
+        subject: `Nouveau devis de ${formData.name}`,
+        content: `
+          Nom: ${formData.name}
+          Email: ${formData.email}
+          Événement: ${formData.event}
+          Message: ${formData.message}
+        `
+      });
+
+      toast({
+        title: "Demande envoyée !",
+        description: "Nous vous répondrons dans les plus brefs délais.",
+      });
+      
+      setFormData({ name: '', email: '', event: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Erreur lors de l'envoi",
+        description: "Veuillez réessayer plus tard.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
