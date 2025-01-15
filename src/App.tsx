@@ -27,40 +27,43 @@ const queryClient = new QueryClient({
     queries: {
       retry: false,
       refetchOnWindowFocus: false,
+      staleTime: 5 * 60 * 1000, // 5 minutes
     },
   },
 });
 
-const App = () => (
-  <BrowserRouter>
+const App = () => {
+  return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <BlogProvider>
-          <Toaster />
-          <Sonner />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
-            <Route path="/creations" element={<Creations />} />
-            <Route path="/creations/layer-cakes" element={<LayerCakes />} />
-            <Route path="/creations/number-cakes" element={<NumberCakes />} />
-            <Route path="/creations/cupcakes" element={<Cupcakes />} />
-            <Route path="/creations/sables" element={<Sables />} />
-            <Route path="/creations/cookies" element={<Cookies />} />
-            <Route path="/creations/pop-cakes" element={<PopCakes />} />
-            <Route path="/aide" element={<Aide />} />
-            <Route path="/aide/allergenes" element={<Allergenes />} />
-            <Route path="/aide/transport" element={<Transport />} />
-            <Route path="/aide/conservation" element={<Conservation />} />
-            <Route path="/aide/devis" element={<Devis />} />
-            <Route path="/aide/commander" element={<Commander />} />
-            <Route path="/cgv" element={<CGV />} />
-          </Routes>
-        </BlogProvider>
-      </TooltipProvider>
+      <BrowserRouter>
+        <TooltipProvider>
+          <BlogProvider>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
+              <Route path="/creations" element={<Creations />} />
+              <Route path="/creations/layer-cakes" element={<LayerCakes />} />
+              <Route path="/creations/number-cakes" element={<NumberCakes />} />
+              <Route path="/creations/cupcakes" element={<Cupcakes />} />
+              <Route path="/creations/sables" element={<Sables />} />
+              <Route path="/creations/cookies" element={<Cookies />} />
+              <Route path="/creations/pop-cakes" element={<PopCakes />} />
+              <Route path="/aide" element={<Aide />} />
+              <Route path="/aide/allergenes" element={<Allergenes />} />
+              <Route path="/aide/transport" element={<Transport />} />
+              <Route path="/aide/conservation" element={<Conservation />} />
+              <Route path="/aide/devis" element={<Devis />} />
+              <Route path="/aide/commander" element={<Commander />} />
+              <Route path="/cgv" element={<CGV />} />
+            </Routes>
+            <Toaster />
+            <Sonner />
+          </BlogProvider>
+        </TooltipProvider>
+      </BrowserRouter>
     </QueryClientProvider>
-  </BrowserRouter>
-);
+  );
+};
 
 export default App;
