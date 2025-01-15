@@ -24,7 +24,7 @@ const CGV = () => {
               Modalités de paiement
             </h2>
             <p className="text-gray-600">
-              Nous acceptons les paiements par carte bancaire, virement bancaire et espèces. Le solde doit être réglé au plus tard lors du retrait de la commande.
+              Nous acceptons les paiements par Paypal, virement bancaire et espèces. Le solde doit être réglé au plus tard lors du retrait de la commande.
             </p>
           </section>
 
@@ -33,9 +33,9 @@ const CGV = () => {
               Mentions légales
             </h2>
             <p className="text-gray-600">
-              SCréations - Entreprise individuelle<br />
-              SIRET : XX XXX XXX XXX XXX<br />
-              Adresse : XX rue XXXXX, XXXXX Ville
+              SCréations - Auto-entrepreneur<br />
+              SIRET : 978 733 277<br />
+              Adresse : Rue Léon Bourgeois 51000 Châlons en Champagne
             </p>
           </section>
         </div>

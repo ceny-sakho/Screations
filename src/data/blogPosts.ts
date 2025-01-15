@@ -14,11 +14,11 @@ export const blogPosts = [
     La décoration finale est l'occasion de laisser libre cours à votre créativité. Des fleurs en sucre aux dégradés de couleurs en passant par les drips colorés, les possibilités sont infinies. N'oubliez pas que la simplicité peut aussi être synonyme d'élégance.`,
     image: "/lovable-uploads/ad8656cb-9cb4-4b23-8a5a-d408fd7108e2.png",
     date: "2024-02-20",
-    categories: ["Tutoriels", "Layer Cakes"]
+    categories: ["Ateliers pâtisserie", "Layer Cakes"]
   },
   {
     id: 2,
-    title: "Tendances Pâtisserie 2024",
+    title: "Tendances Pâtisserie 2025",
     excerpt: "Les nouvelles tendances qui font sensation cette année dans le monde de la pâtisserie créative.",
     content: `2024 marque un tournant passionnant dans le monde de la pâtisserie créative, avec l'émergence de nouvelles tendances qui allient tradition, innovation et conscience environnementale.
 
@@ -31,7 +31,7 @@ export const blogPosts = [
     Enfin, la pâtisserie responsable prend une place importante. L'utilisation d'ingrédients locaux et de saison, la réduction du gaspillage alimentaire et les emballages écologiques deviennent des préoccupations majeures pour les professionnels du secteur.`,
     image: "/lovable-uploads/3d75f27b-f95e-45f0-a609-3647d9c5d824.png",
     date: "2024-02-18",
-    categories: ["Tendances", "Inspiration"]
+    categories: ["Tendances"]
   },
   {
     id: 3,

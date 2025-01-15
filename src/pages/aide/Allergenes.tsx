@@ -23,12 +23,20 @@ const Allergenes = () => {
                 <td className="py-4">Œufs, Lait, Gluten</td>
               </tr>
               <tr className="border-b border-gray-200">
+                <td className="py-4">Number Cake</td>
+                <td className="py-4">Œufs, Lait, Gluten</td>
+              </tr>
+              <tr className="border-b border-gray-200">
                 <td className="py-4">Cupcakes</td>
                 <td className="py-4">Œufs, Lait, Gluten</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="py-4">Cookies</td>
-                <td className="py-4">Œufs, Lait, Gluten, Fruits à coque</td>
+                <td className="py-4">Sablés</td>
+                <td className="py-4">Œufs, Gluten</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="py-4">Popcakes</td>
+                <td className="py-4">Œufs, Gluten, Lait</td>
               </tr>
             </tbody>
           </table>

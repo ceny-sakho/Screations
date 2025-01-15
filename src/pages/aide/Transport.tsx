@@ -18,9 +18,9 @@ const Transport = () => {
               Pour garantir la qualité optimale de nos créations, nous vous recommandons :
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>De transporter le gâteau à plat</li>
+              <li>De transporter le gâteau à plat dans le coffre ou au pied du siège passager</li>
+              <li>D'éviter les freinages brusques et de prendre les virages avec beaucoup de précaution</li>
               <li>De maintenir une température fraîche (éviter le soleil direct)</li>
-              <li>D'éviter les freinages brusques</li>
               <li>De ne pas empiler d'autres objets sur la boîte</li>
             </ul>
           </div>

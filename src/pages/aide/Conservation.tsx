@@ -19,8 +19,7 @@ const Conservation = () => {
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li>Conserver au réfrigérateur entre 4°C et 6°C</li>
-              <li>Consommer dans les 48h pour une qualité optimale</li>
-              <li>Sortir 30 minutes avant dégustation</li>
+              <li>Consommer dans les 72h pour une qualité optimale</li>
               <li>Éviter l'exposition directe au soleil</li>
             </ul>
           </div>
