@@ -22,13 +22,20 @@ import Conservation from "./pages/aide/Conservation";
 import Devis from "./pages/aide/Devis";
 import Commander from "./pages/aide/Commander";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <BlogProvider>
-        <BrowserRouter basename="/">
+  <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <BlogProvider>
           <Toaster />
           <Sonner />
           <Routes>
@@ -50,10 +57,10 @@ const App = () => (
             <Route path="/aide/commander" element={<Commander />} />
             <Route path="/cgv" element={<CGV />} />
           </Routes>
-        </BrowserRouter>
-      </BlogProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
+        </BlogProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </BrowserRouter>
 );
 
 export default App;
