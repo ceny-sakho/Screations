@@ -35,7 +35,7 @@ const queryClient = new QueryClient({
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename="/">
+      <BrowserRouter>
         <TooltipProvider>
           <BlogProvider>
             <Routes>

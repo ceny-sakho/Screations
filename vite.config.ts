@@ -7,7 +7,10 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "0.0.0.0",
     port: 8080,
-    strictPort: true
+    strictPort: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    }
   },
   plugins: [
     react(),
@@ -21,6 +24,9 @@ export default defineConfig(({ mode }) => ({
   preview: {
     port: 8080,
     host: "0.0.0.0",
-    strictPort: true
+    strictPort: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    }
   }
 }));
