@@ -10,22 +10,24 @@ const ContactForm = () => {
     event: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
-      // Simuler l'envoi d'email (dans un vrai cas, ceci serait géré par un backend)
-      console.log('Envoi du devis à sabrina.sakho@gmail.com', {
-        to: 'sabrina.sakho@gmail.com',
-        subject: `Nouveau devis de ${formData.name}`,
-        content: `
-          Nom: ${formData.name}
-          Email: ${formData.email}
-          Événement: ${formData.event}
-          Message: ${formData.message}
-        `
+      const response = await fetch('https://YOUR_PROJECT_REF.supabase.co/functions/v1/send-quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi du devis');
+      }
 
       toast({
         title: "Demande envoyée !",
@@ -34,11 +36,14 @@ const ContactForm = () => {
       
       setFormData({ name: '', email: '', event: '', message: '' });
     } catch (error) {
+      console.error('Erreur:', error);
       toast({
         title: "Erreur lors de l'envoi",
         description: "Veuillez réessayer plus tard.",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -65,6 +70,7 @@ const ContactForm = () => {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent/20 
                          focus:border-accent outline-none transition-colors"
+                disabled={isSubmitting}
               />
             </div>
             <div>
@@ -78,6 +84,7 @@ const ContactForm = () => {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent/20 
                          focus:border-accent outline-none transition-colors"
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -93,6 +100,7 @@ const ContactForm = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent/20 
                        focus:border-accent outline-none transition-colors"
               placeholder="Mariage, Anniversaire, etc."
+              disabled={isSubmitting}
             />
           </div>
           
@@ -108,16 +116,19 @@ const ContactForm = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent/20 
                        focus:border-accent outline-none transition-colors"
               placeholder="Décrivez votre projet..."
+              disabled={isSubmitting}
             />
           </div>
           
           <button
             type="submit"
             className="w-full bg-accent text-white px-6 py-3 rounded-md font-medium flex items-center 
-                     justify-center gap-2 hover:bg-accent/90 transition-colors"
+                     justify-center gap-2 hover:bg-accent/90 transition-colors disabled:opacity-50 
+                     disabled:cursor-not-allowed"
+            disabled={isSubmitting}
           >
             <Send size={20} />
-            Envoyer ma demande
+            {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
           </button>
         </form>
       </div>
