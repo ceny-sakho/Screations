@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Creations = () => {
   const categories = [
-    { title: 'Layer Cakes', href: '/creations/layer-cakes', image: '/lovable-uploads/4b2226e4-3693-42c3-af72-7c356dbefa50.png' },
+    { title: 'Layer Cakes', href: '/creations/layer-cakes', image: '/lovable-uploads/b4c4f8d7-66da-492c-9e78-0ce71e5db02d.png' },
     { title: 'Number Cakes', href: '/creations/number-cakes', image: '/lovable-uploads/89ec154e-c499-44ca-b303-3cd65c4f7a46.png' },
     { title: 'Cupcakes', href: '/creations/cupcakes', image: '/lovable-uploads/677afdb1-eda2-4ec0-865f-e10dee321b53.png' },
     { title: 'Sablés', href: '/creations/sables', image: '/lovable-uploads/c79cb987-9e87-455e-aea5-b5fc329c494f.png' },
