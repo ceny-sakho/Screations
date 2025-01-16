@@ -17,7 +17,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://ac51a418-2349-48ce-bc3b-fa1895e1292c.supabase.co/functions/v1/send-quote', {
+      const response = await fetch('https://ac51a418-2349-48ce-bc3b-fa1895e1292c.functions.supabase.co/send-quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
