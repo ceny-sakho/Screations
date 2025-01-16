@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -17,18 +18,11 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://nwihftegillpqrhxlatl.supabase.co/functions/v1/send-quote', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53aWhmdGVnaWxscHFyaHhsYXRsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcwMTk1NTMsImV4cCI6MjA1MjU5NTU1M30.fxukJq7eJ0US_oYxFuoYOappxUNs47WEC5GkZGuNRRQ'
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-quote', {
+        body: formData
       });
 
-      if (!response.ok) {
-        throw new Error('Erreur lors de l\'envoi du devis');
-      }
+      if (error) throw error;
 
       toast({
         title: "Demande envoyée !",
