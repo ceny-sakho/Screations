@@ -1,5 +1,5 @@
 import { serve } from "https://deno.fresh.run/std@0.168.0/http/server.ts";
-const SENDGRID_API_KEY = Deno.env.get('SENDGRID_API_KEY');
+const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
 
 interface QuoteRequest {
   name: string;
@@ -21,33 +21,24 @@ serve(async (req) => {
   try {
     const { name, email, event, message } = await req.json() as QuoteRequest;
 
-    const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+    const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${SENDGRID_API_KEY}`,
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        personalizations: [
-          {
-            to: [{ email: 'sabrina.sakho@gmail.com' }],
-            subject: `Nouvelle demande de devis de ${name}`,
-          },
-        ],
-        from: { email: 'no-reply@cakesbysab.com', name: 'Cakes By Sab' },
-        content: [
-          {
-            type: 'text/plain',
-            value: `
+        from: 'Cakes By Sab <no-reply@resend.dev>',
+        to: 'sabrina.sakho@gmail.com',
+        subject: `Nouvelle demande de devis de ${name}`,
+        text: `
 Nouvelle demande de devis reçue :
 
 Nom : ${name}
 Email : ${email}
 Type d'événement : ${event}
 Message : ${message}
-            `,
-          },
-        ],
+        `,
       }),
     });
 
