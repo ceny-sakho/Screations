@@ -1,29 +1,26 @@
-import { serve } from 'https://deno.fresh.run/std@0.168.0/http/server.ts'
-const SENDGRID_API_KEY = Deno.env.get('SENDGRID_API_KEY')
+import { serve } from "https://deno.fresh.run/std@0.168.0/http/server.ts";
+const SENDGRID_API_KEY = Deno.env.get('SENDGRID_API_KEY');
 
 interface QuoteRequest {
-  name: string
-  email: string
-  event: string
-  message: string
+  name: string;
+  email: string;
+  event: string;
+  message: string;
 }
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST',
-  'Access-Control-Allow-Headers': 'Content-Type',
-  'Content-Type': 'application/json'
-}
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+};
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
-    return new Response('ok', {
-      headers: corsHeaders
-    })
+    return new Response('ok', { headers: corsHeaders });
   }
 
   try {
-    const { name, email, event, message } = await req.json() as QuoteRequest
+    const { name, email, event, message } = await req.json() as QuoteRequest;
+
     const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
       method: 'POST',
       headers: {
@@ -34,39 +31,40 @@ serve(async (req) => {
         personalizations: [
           {
             to: [{ email: 'sabrina.sakho@gmail.com' }],
-            subject: `Nouveau devis de ${name}`,
+            subject: `Nouvelle demande de devis de ${name}`,
           },
         ],
-        from: { email: 'no-reply@votredomaine.com', name: 'Votre Entreprise' },
+        from: { email: 'no-reply@cakesbysab.com', name: 'Cakes By Sab' },
         content: [
           {
             type: 'text/plain',
             value: `
-Nouveau devis reçu :
-Nom: ${name}
-Email: ${email}
-Événement: ${event}
-Message: ${message}
+Nouvelle demande de devis reçue :
+
+Nom : ${name}
+Email : ${email}
+Type d'événement : ${event}
+Message : ${message}
             `,
           },
         ],
       }),
-    })
+    });
 
     if (!response.ok) {
-      throw new Error('Erreur lors de l\'envoi de l\'email')
+      throw new Error('Erreur lors de l\'envoi de l\'email');
     }
 
     return new Response(JSON.stringify({ success: true }), {
-      headers: corsHeaders
-    })
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
   } catch (error) {
     return new Response(
       JSON.stringify({ error: error.message }),
-      {
+      { 
         status: 400,
-        headers: corsHeaders
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
-    )
+    );
   }
-})
+});

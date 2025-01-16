@@ -17,11 +17,11 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://ac51a418-2349-48ce-bc3b-fa1895e1292c.supabase.co/rest/v1/rpc/send_quote', {
+      const response = await fetch('https://ac51a418-2349-48ce-bc3b-fa1895e1292c.supabase.co/functions/v1/send-quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFjNTFhNDE4LTIzNDktNDhjZS1iYzNiLWZhMTg5NWUxMjkyYyIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzA1MzgwNjg5LCJleHAiOjIwMjA5NTY2ODl9.0e46DtTzeLLJ1TfVPz3R_T0tNZgZYBvTrGIZNph_p0c'
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFjNTFhNDE4LTIzNDktNDhjZS1iYzNiLWZhMTg5NWUxMjkyYyIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNzA1MzgwNjg5LCJleHAiOjIwMjA5NTY2ODl9.0e46DtTzeLLJ1TfVPz3R_T0tNZgZYBvTrGIZNph_p0c'
         },
         body: JSON.stringify(formData),
       });
