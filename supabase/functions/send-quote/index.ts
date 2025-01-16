@@ -14,6 +14,7 @@ const corsHeaders = {
 };
 
 serve(async (req) => {
+  // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }
@@ -50,6 +51,7 @@ Message : ${message}
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
+    console.error('Erreur:', error);
     return new Response(
       JSON.stringify({ error: error.message }),
       { 
