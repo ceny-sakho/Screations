@@ -12,7 +12,7 @@ const LayerCakes = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/lovable-uploads/b6b4d021-2aa4-452e-a455-a47f1e32a6a7.png"
+              src="/lovable-uploads/e99be464-be4d-4e09-859c-095fb08a103a.png"
               alt="Layer Cake Élégant" 
               className="w-full h-64 object-cover"
             />
