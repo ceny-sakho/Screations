@@ -12,13 +12,13 @@ const Cupcakes = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1587668178277-295251f900ce" 
-              alt="Cupcake Example" 
+              src="/lovable-uploads/6ec3ad9e-88f4-4a43-93b0-07acb1ec624f.png"
+              alt="Cupcakes Oreo" 
               className="w-full h-64 object-cover"
             />
             <div className="p-6">
-              <h2 className="text-2xl font-playfair font-semibold mb-2">Cupcakes Vanille</h2>
-              <p className="text-gray-600 mb-4">Délicieux cupcakes à la vanille avec glaçage au beurre.</p>
+              <h2 className="text-2xl font-playfair font-semibold mb-2">Cupcakes Oreo</h2>
+              <p className="text-gray-600 mb-4">Délicieux cupcakes au chocolat avec glaçage à la crème et décoration Oreo.</p>
               <p className="text-accent font-semibold">4€ pièce</p>
             </div>
           </div>
