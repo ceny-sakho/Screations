@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     id: 1,
-    title: "L'art du Layer Cake : Guide complet",
+    title: "Atelier anniversaire privatisé",
     excerpt: "Découvrez tous nos secrets pour réaliser un Layer Cake parfait, de la base jusqu'à la décoration finale.",
     content: `Le Layer Cake est bien plus qu'un simple gâteau - c'est une véritable œuvre d'art qui demande précision, patience et créativité. Dans ce guide complet, nous allons vous dévoiler tous nos secrets pour réaliser un Layer Cake digne des plus grandes pâtisseries.
 
@@ -12,7 +12,7 @@ export const blogPosts = [
     Pour un montage réussi, n'hésitez pas à utiliser un plateau tournant et une spatule coudée. Le secret d'un Layer Cake bien droit ? L'utilisation d'un cadre à pâtisserie pendant le montage et une période de réfrigération entre chaque étape importante.
 
     La décoration finale est l'occasion de laisser libre cours à votre créativité. Des fleurs en sucre aux dégradés de couleurs en passant par les drips colorés, les possibilités sont infinies. N'oubliez pas que la simplicité peut aussi être synonyme d'élégance.`,
-    image: "/lovable-uploads/ad8656cb-9cb4-4b23-8a5a-d408fd7108e2.png",
+    image: "/lovable-uploads/9e6d72a6-e284-407b-8fdf-bb97dd9e5070.png",
     date: "2024-02-20",
     categories: ["Ateliers pâtisserie", "Layer Cakes"]
   },
