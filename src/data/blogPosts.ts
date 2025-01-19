@@ -14,7 +14,7 @@ export const blogPosts = [
     La décoration finale est l'occasion de laisser libre cours à votre créativité. Des fleurs en sucre aux dégradés de couleurs en passant par les drips colorés, les possibilités sont infinies. N'oubliez pas que la simplicité peut aussi être synonyme d'élégance.`,
     image: "/lovable-uploads/9e6d72a6-e284-407b-8fdf-bb97dd9e5070.png",
     date: "2024-02-20",
-    categories: ["Ateliers pâtisserie", "Layer Cakes"]
+    categories: ["Ateliers pâtisserie"]
   },
   {
     id: 2,
