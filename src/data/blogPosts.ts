@@ -2,16 +2,16 @@ export const blogPosts = [
   {
     id: 1,
     title: "Atelier anniversaire privatisé",
-    excerpt: "Découvrez tous nos secrets pour réaliser un Layer Cake parfait, de la base jusqu'à la décoration finale.",
-    content: `Le Layer Cake est bien plus qu'un simple gâteau - c'est une véritable œuvre d'art qui demande précision, patience et créativité. Dans ce guide complet, nous allons vous dévoiler tous nos secrets pour réaliser un Layer Cake digne des plus grandes pâtisseries.
+    excerpt: "Découvrez notre formule atelier anniversaire privatisé pour créer et décorer vos propres cupcakes dans une ambiance festive et conviviale.",
+    content: `Vous cherchez une idée originale pour célébrer un anniversaire ? Notre atelier cupcakes privatisé est l'occasion parfaite de passer un moment unique et gourmand entre amis ou en famille.
 
-    La base d'un bon Layer Cake commence par des génoises parfaitement exécutées. La clé réside dans la légèreté de la pâte et une cuisson homogène. Nous recommandons de diviser la pâte en plusieurs moules identiques plutôt que de trancher un seul gâteau, pour garantir des couches uniformes.
+    Dans une ambiance chaleureuse et conviviale, nos pâtissiers experts vous guideront pas à pas dans la création de magnifiques cupcakes. De la préparation de la pâte à la décoration finale, vous apprendrez toutes les techniques pour réaliser des cupcakes dignes des plus belles pâtisseries.
 
-    Le choix de la crème est également crucial. Que vous optiez pour une crème au beurre, une ganache ou une crème au fromage, elle doit être suffisamment ferme pour maintenir les couches tout en restant crémeuse et délicieuse. La température de travail est essentielle : trop froide, la crème sera difficile à étaler ; trop chaude, elle ne tiendra pas.
+    Au programme : préparation de différentes pâtes à cupcakes, réalisation de crèmes au beurre colorées, techniques de décoration avec des poches à douille professionnelles, et création de décorations en pâte à sucre. Chaque participant repartira avec ses créations et un livret de recettes.
 
-    Pour un montage réussi, n'hésitez pas à utiliser un plateau tournant et une spatule coudée. Le secret d'un Layer Cake bien droit ? L'utilisation d'un cadre à pâtisserie pendant le montage et une période de réfrigération entre chaque étape importante.
+    L'atelier est adapté à tous les niveaux, des débutants aux plus expérimentés. Nous fournissons tout le matériel nécessaire et les ingrédients de qualité. Il ne vous reste plus qu'à venir avec votre bonne humeur et votre créativité !
 
-    La décoration finale est l'occasion de laisser libre cours à votre créativité. Des fleurs en sucre aux dégradés de couleurs en passant par les drips colorés, les possibilités sont infinies. N'oubliez pas que la simplicité peut aussi être synonyme d'élégance.`,
+    Pour rendre ce moment encore plus spécial, nous pouvons personnaliser la décoration de l'atelier selon vos souhaits et le thème de votre choix.`,
     image: "/lovable-uploads/9e6d72a6-e284-407b-8fdf-bb97dd9e5070.png",
     date: "2024-02-20",
     categories: ["Ateliers pâtisserie"]
