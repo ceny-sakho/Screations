@@ -34,7 +34,7 @@ serve(async (req) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Screations <onboarding@resend.dev>',
+        from: 'onboarding@resend.dev',
         to: ['sabrina.sakho@gmail.com'],
         subject: `Nouvelle demande de devis de ${name}`,
         html: `
@@ -59,7 +59,7 @@ serve(async (req) => {
       status: 200,
     });
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('Erreur dans la fonction send-quote:', error);
     return new Response(
       JSON.stringify({ 
