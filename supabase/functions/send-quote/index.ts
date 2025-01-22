@@ -29,16 +29,15 @@ serve(async (req) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Cakes By Sab <no-reply@resend.dev>',
+        from: 'Screations <no-reply@resend.dev>',
         to: 'sabrina.sakho@gmail.com',
         subject: `Nouvelle demande de devis de ${name}`,
-        text: `
-Nouvelle demande de devis reçue :
-
-Nom : ${name}
-Email : ${email}
-Type d'événement : ${event}
-Message : ${message}
+        html: `
+          <h2>Nouvelle demande de devis reçue</h2>
+          <p><strong>Nom :</strong> ${name}</p>
+          <p><strong>Email :</strong> ${email}</p>
+          <p><strong>Type d'événement :</strong> ${event}</p>
+          <p><strong>Message :</strong> ${message}</p>
         `,
       }),
     });
