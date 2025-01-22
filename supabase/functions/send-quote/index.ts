@@ -46,7 +46,8 @@ serve(async (req) => {
       throw new Error('Erreur lors de l\'envoi de l\'email');
     }
 
-    return new Response(JSON.stringify({ success: true }), {
+    const data = await response.json();
+    return new Response(JSON.stringify(data), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
