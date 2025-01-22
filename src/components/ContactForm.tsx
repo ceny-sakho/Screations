@@ -22,7 +22,14 @@ const ContactForm = () => {
         body: formData
       });
 
-      if (error) throw error;
+      if (error) {
+        console.error('Erreur Supabase:', error);
+        throw new Error(error.message);
+      }
+
+      if (!data) {
+        throw new Error('Aucune réponse reçue');
+      }
 
       toast({
         title: "Demande envoyée !",
@@ -30,11 +37,11 @@ const ContactForm = () => {
       });
       
       setFormData({ name: '', email: '', event: '', message: '' });
-    } catch (error) {
-      console.error('Erreur:', error);
+    } catch (error: any) {
+      console.error('Erreur détaillée:', error);
       toast({
         title: "Erreur lors de l'envoi",
-        description: "Veuillez réessayer plus tard.",
+        description: error.message || "Veuillez réessayer plus tard.",
         variant: "destructive"
       });
     } finally {

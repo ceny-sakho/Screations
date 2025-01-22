@@ -21,6 +21,11 @@ serve(async (req) => {
 
   try {
     const { name, email, event, message } = await req.json() as QuoteRequest;
+    console.log('Received quote request:', { name, email, event, message });
+
+    if (!RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured');
+    }
 
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -29,11 +34,11 @@ serve(async (req) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'Screations <no-reply@resend.dev>',
-        to: 'sabrina.sakho@gmail.com',
+        from: 'Screations <onboarding@resend.dev>',
+        to: ['sabrina.sakho@gmail.com'],
         subject: `Nouvelle demande de devis de ${name}`,
         html: `
-          <h2>Nouvelle demande de devis reçue</h2>
+          <h2>Nouvelle demande de devis</h2>
           <p><strong>Nom :</strong> ${name}</p>
           <p><strong>Email :</strong> ${email}</p>
           <p><strong>Type d'événement :</strong> ${event}</p>
@@ -42,21 +47,28 @@ serve(async (req) => {
       }),
     });
 
+    const responseData = await response.json();
+    console.log('Resend API response:', responseData);
+
     if (!response.ok) {
-      throw new Error('Erreur lors de l\'envoi de l\'email');
+      throw new Error(`Erreur Resend: ${JSON.stringify(responseData)}`);
     }
 
-    const data = await response.json();
-    return new Response(JSON.stringify(data), {
+    return new Response(JSON.stringify(responseData), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 200,
     });
+
   } catch (error) {
-    console.error('Erreur:', error);
+    console.error('Erreur dans la fonction send-quote:', error);
     return new Response(
-      JSON.stringify({ error: error.message }),
-      { 
-        status: 400,
+      JSON.stringify({ 
+        error: error.message,
+        details: 'Une erreur est survenue lors de l\'envoi du devis' 
+      }),
+      {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        status: 400,
       }
     );
   }
