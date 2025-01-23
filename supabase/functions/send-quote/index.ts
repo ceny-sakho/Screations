@@ -35,7 +35,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: 'onboarding@resend.dev',
-        to: ['sabrina.sakho@gmail.com'],
+        to: ['ceny.sakho@gmail.com'],
         subject: `Nouvelle demande de devis de ${name}`,
         html: `
           <h2>Nouvelle demande de devis</h2>
